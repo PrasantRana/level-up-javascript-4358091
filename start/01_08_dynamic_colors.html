@@ -18,6 +18,31 @@
 
   <script>
     // Write your code here
+    // function makeBodyBlue(){
+    //   document.body.style.background = "#0f62fe";
+    // }
+
+    // function makeBodyPink() {
+    //  document.body.style.background = "#ff7eb6";
+    // }
+    
+    // function makeBodyGreen() {
+    //  document.body.style.background = "#42be65";
+    // }
+    
+    function changeColor (color){
+      return function(){
+        document.body.style.color = color;
+      }
+    }
+
+    const bgColorBlue = changeColor("#0f62fe");
+    const bgColorPink = changeColor("#ff7eb6");
+    const bgColorGreen = changeColor("#0f62fe");
+
+    document.querySelector('#blue').addEventListener('click', () => bgColorBlue);
+    document.querySelector('#pink').addEventListener('click', () => bgColorPink);
+    document.querySelector('#green').addEventListener('click', () => bgColorGreen);
 
   </script>
 </body>
